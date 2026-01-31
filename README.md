@@ -1,6 +1,7 @@
 # 🎁 Client–Server Wishlist Application
 
 A **JavaFX client–server application** built using **Java, JavaFX, SQL, and PL/SQL**, following a **layered architecture** with **socket-based communication**.  
+
 The system allows multiple users to manage wishlists, contribute to gifts, and interact socially through friend requests and notifications.
 
 ---
@@ -47,8 +48,6 @@ client/
 ├── helpers/
 │   ├── SessionManager
 │   │   └── Stores current user ID and username
-│   └── UserContext
-│       └── Determines which user's data is displayed
 │
 └── ui/
     └── JavaFX views (FXML files)
@@ -120,7 +119,6 @@ Client displays data on UI
 ## 🗄 Database Creation
 The application uses an Oracle Database designed to support multi-user interactions, wishlists, contributions, and notifications.
 
----
 
 ## 📐 Entity Relationship Diagram (ERD)
 
@@ -128,16 +126,11 @@ The application uses an Oracle Database designed to support multi-user interacti
 
 - Users
 - Friend relationships
-- Wishes (items)
+- Wishes (gifts)
 - Contributions
 - Notifications
 
-### Relationships
 
-- Many-to-many: Users ↔ Friends
-- One-to-many: Wishes → Contributions
-- One-to-many: Users → Notifications
----
 
 ## 🧱 Database Schema
 
@@ -157,7 +150,7 @@ The application uses an Oracle Database designed to support multi-user interacti
 - Uses a primary key ID
 - Applies foreign key constraints to maintain data integrity
 - Supports cascading rules where needed
----
+
 
 ## ⚙ ID Management & Triggers
 
@@ -171,19 +164,21 @@ The application uses an Oracle Database designed to support multi-user interacti
 - Ensures unique IDs
 - Prevents manual ID handling
 - Maintains consistency across all tables
+  
 
 ## 🗃 Database Technology
 
 - Database: Oracle Database
 - Language: SQL & PL/SQL
 - Connection: JDBC (handled via DBConnection helper on server side)
----
+  
 
 ## 🔐 Database Access
 
 - All database operations are executed only on the server side
 - Client side never accesses the database directly
 - Communication occurs via socket requests
+---
 
 ## ✨ Features
 ### 🖥 Server Side
@@ -191,6 +186,7 @@ The application uses an Oracle Database designed to support multi-user interacti
 - Start server (connects to database)
 - Stop server (disconnects from database)
 - Handle multiple clients concurrently
+
 
 ### 💻 Client Side
 
@@ -242,4 +238,5 @@ The application uses an Oracle Database designed to support multi-user interacti
 - Socket-based communication ensures real-time interaction
 - Clean separation of concerns using layered architecture
 ---
+
 
