@@ -1,4 +1,4 @@
-# 🎁 Client–Server Wishlist Application
+# Client–Server Wishlist Application
 
 A **JavaFX client–server application** built using **Java, JavaFX, SQL, and PL/SQL**, following a **layered architecture** with **socket-based communication**.  
 
@@ -6,7 +6,7 @@ The system allows multiple users to manage wishlists, contribute to gifts, and i
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
 - Java
 - JavaFX
@@ -17,15 +17,15 @@ The system allows multiple users to manage wishlists, contribute to gifts, and i
 
 ---
 
-## 🏗 Project Architecture
+## Project Architecture
 
 The project follows a **Client–Server architecture**, where the **client communicates with the server using sockets**.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
-### 🔹 Client Side
+### Client Side
 
 ```text
 client/
@@ -53,7 +53,7 @@ client/
     └── JavaFX views (FXML files)
 ```
 
-### 🔹 Server Side
+### Server Side
 
 ```text
 server/
@@ -87,7 +87,7 @@ server/
     └── SQL & PL-SQL scripts
 ```
 
-### 🔄 Project Cycle (Request Flow)
+### Project Cycle (Request Flow)
 
 ```text
 Client enters data
@@ -116,11 +116,11 @@ Client displays data on UI
 ```
 ---
 
-## 🗄 Database Creation
+## Database Creation
 The application uses an Oracle Database designed to support multi-user interactions, wishlists, contributions, and notifications.
 
 
-## 📐 Entity Relationship Diagram (ERD)
+## Entity Relationship Diagram (ERD)
 
 ### Designed to represent:
 
@@ -132,11 +132,11 @@ The application uses an Oracle Database designed to support multi-user interacti
 
 
 
-## 🧱 Database Schema
+## Database Schema
 
 ### A dedicated schema is created for the project
 
-#### Tables include (example):
+#### Tables include:
 
 - USERS
 - FRIENDSHIPS
@@ -152,7 +152,7 @@ The application uses an Oracle Database designed to support multi-user interacti
 - Supports cascading rules where needed
 
 
-## ⚙ ID Management & Triggers
+## ID Management & Triggers
 
 ### Each table has:
 
@@ -166,29 +166,29 @@ The application uses an Oracle Database designed to support multi-user interacti
 - Maintains consistency across all tables
   
 
-## 🗃 Database Technology
+## Database Technology
 
 - Database: Oracle Database
 - Language: SQL & PL/SQL
 - Connection: JDBC (handled via DBConnection helper on server side)
   
 
-## 🔐 Database Access
+## Database Access
 
 - All database operations are executed only on the server side
 - Client side never accesses the database directly
 - Communication occurs via socket requests
 ---
 
-## ✨ Features
-### 🖥 Server Side
+## Features
+### Server Side
 
 - Start server (connects to database)
 - Stop server (disconnects from database)
 - Handle multiple clients concurrently
 
 
-### 💻 Client Side
+### Client Side
 
 - Register / Log In
 - Log in with multiple users at the same time
@@ -221,7 +221,7 @@ The application uses an Oracle Database designed to support multi-user interacti
     - Contributed amount
 ---
 
-## ▶ How to Run the Project
+## How to Run the Project
 
 - Run Server Side
 - Click Start Server
@@ -231,12 +231,13 @@ The application uses an Oracle Database designed to support multi-user interacti
 → Database data will no longer be accessible
 ---
 
-## 📌 Notes
+## Notes
 
 - Supports multi-client connections
 - Uses DTOs to control displayed data per user
 - Socket-based communication ensures real-time interaction
 - Clean separation of concerns using layered architecture
 ---
+
 
 
