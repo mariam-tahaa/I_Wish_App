@@ -128,14 +128,12 @@ The application uses an Oracle Database designed to support multi-user interacti
 
 - Users
 - Friend relationships
-- Wishlists
 - Wishes (items)
 - Contributions
 - Notifications
 
 ### Relationships
 
-- One-to-many: Users → Wishlists
 - Many-to-many: Users ↔ Friends
 - One-to-many: Wishes → Contributions
 - One-to-many: Users → Notifications
@@ -148,7 +146,8 @@ The application uses an Oracle Database designed to support multi-user interacti
 #### Tables include (example):
 
 - USERS
-- FRIENDS
+- FRIENDSHIPS
+- FRIEND REQUESTS
 - WISH_ITEMS
 - CONTRIBUTIONS
 - NOTIFICATIONS
@@ -243,3 +242,4 @@ The application uses an Oracle Database designed to support multi-user interacti
 - Socket-based communication ensures real-time interaction
 - Clean separation of concerns using layered architecture
 ---
+
